@@ -1,9 +1,12 @@
 #!/bin/bash
 
-echo "What is you name? "
-read name
+if [ ${1,,} = derrick ]; then
+    echo "Oh, you're the boss here. Welcome!"
+elif [ ${1,,} = help ]; then
+    echo "Enter your name: "
+    read username
+    echo "Hello $username, you are Welcome"
 
-echo "How old are you? "
-read age
-
-echo "Hello $name, you are $age years old"
+else
+    echo "I don't know you"
+fi
